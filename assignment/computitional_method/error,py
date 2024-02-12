@@ -1,0 +1,24 @@
+def calculate_errors(true_value, approx_value):
+    absolute_error = abs(true_value - approx_value)
+
+    if true_value != 0:
+        relative_error = absolute_error / abs(true_value)
+        percentage_error = relative_error * 100
+    else:
+        relative_error = None
+        percentage_error = None
+        if absolute_error == 0:
+            percentage_error = 0.0
+    
+    return absolute_error, relative_error, percentage_error
+
+
+
+
+true_value = 10
+approximation = 9.5
+abs_error, rel_error, perc_error = calculate_errors(true_value, approximation)
+print("Absolute Error:", abs_error)
+print("Relative Error:", rel_error)
+print("percentage error",perc_error )
+
